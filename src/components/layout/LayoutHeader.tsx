@@ -39,13 +39,13 @@ const LayoutHeader = () => {
                     </Link>
 
                     <nav className="hidden lg:flex gap-5 text-blue-900 font-semibold text-sm">
-                        <Link href="/tour/hanoi">Tour Hà Nội</Link>
-                        <Link href="/tour/halong">Tour Hạ Long</Link>
-                        <Link href="/tour/ninhbinh">Tour Ninh Bình</Link>
-                        <Link href="/tour/sapa">Tour Sapa</Link>
-                        <Link href="/tour/hagiang">Tour Hà Giang</Link>
-                        <Link href="/tour/dong-tay-bac">Tour Đông Tây Bắc</Link>
-                        <Link href="/tour/lien-tuyen">Tour Liên Tuyến</Link>
+                        <Link href="/">Tour Hà Nội</Link>
+                        <Link href="/">Tour Hạ Long</Link>
+                        <Link href="/">Tour Ninh Bình</Link>
+                        <Link href="/">Tour Sapa</Link>
+                        <Link href="/">Tour Hà Giang</Link>
+                        <Link href="/">Tour Đông Tây Bắc</Link>
+                        <Link href="/">Tour Liên Tuyến</Link>
                         <Link href="/about">Giới thiệu</Link>
                     </nav>
 

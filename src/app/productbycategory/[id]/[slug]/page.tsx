@@ -1,4 +1,3 @@
-// "use client"
 import ImageWithFallback from "@/components/image/ImageWithCallBack";
 import { getAllCategory, getCategoryById } from "@/services/category/categoryService";
 import { getProductByCategory } from "@/services/product/productService";

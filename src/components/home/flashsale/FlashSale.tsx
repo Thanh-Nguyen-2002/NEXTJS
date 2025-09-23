@@ -20,7 +20,7 @@ export default async function FlashSale() {
     return (
         <div className=' p-3'>
             <div className="max-w-[1400px] mx-auto rounded-[8px] pb-2 group">
-                <header className="relative">
+                <div className="relative">
                     <div className="mx-auto text-center content-center">
 
                         <div className="flex flex-col md:flex-row items-center md:items-end justify-between gap-3 md:gap-4 py-6">
@@ -60,7 +60,7 @@ export default async function FlashSale() {
                         </div>
 
                     </div>
-                </header>
+                </div>
 
                     <div className='mt-5'>
 
