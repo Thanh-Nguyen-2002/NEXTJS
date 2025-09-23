@@ -1,4 +1,3 @@
-"use client"
 import { EnvironmentOutlined, MailOutlined, PhoneOutlined, SendOutlined } from "@ant-design/icons"
 import { BookOpen, FileText, Handshake, Shield } from "lucide-react";
 

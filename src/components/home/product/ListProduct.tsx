@@ -1,6 +1,7 @@
 import { getAllCategory } from "@/services/category/categoryService";
 import { categoryItems } from "@/types/category";
 import Link from "next/link";
+import ContentProduct from "./ContentProduct";
 
 export default async function ListProduct() {   
     const page = 0;
@@ -10,7 +11,7 @@ export default async function ListProduct() {
     const responseCategory = category?.data?.content
 
     return (
-        <div>
+        <div className="max-w-[1400px] mx-auto p-2">
             {responseCategory.map((cate) => {
 
                 return(
@@ -40,6 +41,12 @@ export default async function ListProduct() {
                                 </button>
                             </div>
 
+                        </div>
+
+                        <div>
+                            <ContentProduct 
+                                id={cate.id}
+                            />
                         </div>
                         
                     </div>
