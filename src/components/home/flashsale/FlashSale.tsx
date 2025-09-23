@@ -1,9 +1,6 @@
 import ImageWithFallback from "@/components/image/ImageWithCallBack";
 import { getFlashSale } from "@/services/flashsale/flashsaleService"
-import { ShoppingCartOutlined } from "@ant-design/icons";
-import { Button } from "antd";
 import { Flame } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import FlipCountdown from "./FlipCountdown";
 

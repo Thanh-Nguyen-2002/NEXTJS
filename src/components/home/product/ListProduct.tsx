@@ -1,4 +1,5 @@
 import { getAllCategory } from "@/services/category/categoryService";
+import { categoryItems } from "@/types/category";
 import Link from "next/link";
 
 export default async function ListProduct() {   
@@ -18,7 +19,7 @@ export default async function ListProduct() {
                             <h2 className="text-xl font-bold uppercase">{cate.name}</h2>
                             <div className="flex gap-5">
                                 <div className="flex gap-2">
-                                    {(cate.categoryItems || []).slice(0, 2).map((item: any) => (
+                                    {(cate.categoryItems || []).slice(0, 2).map((item: categoryItems) => (
                                         <div
                                             key={item.id}
                                             // onClick={() => navigate(`/category/${cat.id}/${item.id}/${item.slug}`)}

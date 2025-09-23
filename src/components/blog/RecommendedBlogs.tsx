@@ -5,7 +5,6 @@ import useGetAllBlog from "@/hooks/blog/useGetAllBlog";
 import ApiError from "../error/ApiError";
 import { Post } from "@/types/blog";
 import SkeletonRecommendedBlog from "../skeleton/blog/SkeletonRecommendedBlog";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import ImageWithFallback from "../image/ImageWithCallBack";
 

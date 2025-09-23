@@ -1,7 +1,8 @@
-import ImageWithFallback from "@/components/image/ImageWithCallBack";
-import { getAllCategory, getCategoryById } from "@/services/category/categoryService";
-import { getProductByCategory } from "@/services/product/productService";
-import { Button, Col, Form, Input, Row, Select } from "antd";
+// import ImageWithFallback from "@/components/image/ImageWithCallBack";
+import { getCategoryById } from "@/services/category/categoryService";
+import { categoryItems } from "@/types/category";
+// import { getProductByCategory } from "@/services/product/productService";
+import { Col, Row } from "antd";
 import { Tag } from "lucide-react";
 import Link from "next/link";
 type Prop = {
@@ -9,8 +10,8 @@ type Prop = {
 }
 export default async function ProductByCategory({ params }: Prop) {
     // const productBycategory = await getProductByCategory()c
-    const page = 0
-    const size = 10
+    // const page = 0
+    // const size = 10
     const { id } = params
     if(!id) return(
         <div>
@@ -21,8 +22,8 @@ export default async function ProductByCategory({ params }: Prop) {
     const responseCategoryDetail = await getCategoryById(id)
     const categoryDetail = responseCategoryDetail?.data
 
-    const responseProduct = await getProductByCategory(id, page, size)
-    const product = responseProduct?.data?.content
+    // const responseProduct = await getProductByCategory(id, page, size)
+    // const product = responseProduct?.data?.content
 
     return (
         <div className='mt-5 max-w-[1400px] p-3 mx-auto'>
@@ -66,7 +67,7 @@ export default async function ProductByCategory({ params }: Prop) {
                                 "
                                 >
                                 {categoryDetail.categoryItems
-                                    .map((item: any) => (
+                                    .map((item: categoryItems) => (
                                     <div
                                         key={item.id}
                                         // onClick={() => navigate(`/category/${categoryDetail.id}/${item.id}/${item.slug}`)}
@@ -76,11 +77,11 @@ export default async function ProductByCategory({ params }: Prop) {
                                         "
                                     >
                                         <div className="relative w-24 h-24">
-                                            <ImageWithFallback
-                                                src={item.image}
+                                            {/* <ImageWithFallback
+                                                src={item.}
                                                 alt={item.name}
                                                 className="w-24 h-24 object-cover rounded-full border-gray-200"
-                                            />
+                                            /> */}
                                         </div>
                                         <p className="text-sm font-bold text-gray-800 text-center truncate w-full">
                                             {item.name.toUpperCase()}

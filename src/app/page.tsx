@@ -1,7 +1,6 @@
 import Banner from "@/components/home/Banner";
 import Blog from "@/components/home/blog/Blog";
 import FlashSale from "@/components/home/flashsale/FlashSale";
-import ListProduct from "@/components/home/product/ListProduct";
 
 export default function Home() {
   return (
