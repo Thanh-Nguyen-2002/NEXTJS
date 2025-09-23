@@ -8,9 +8,9 @@ export default function Loading() {
                 initial={{ rotate: 0 }}
                 animate={{ rotate: 360 }}
                 transition={{
-                duration: 1,
-                repeat: Infinity,
-                ease: "linear",
+                    duration: 1,
+                    repeat: Infinity,
+                    ease: "linear",
                 }}
                 className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full"
             />
