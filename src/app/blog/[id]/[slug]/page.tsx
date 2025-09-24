@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Tin tức, kinh nghiệm và chia sẻ hành trình từ Codec Travel",
 };
 
-type Props = {
+interface Props {
     params: { id: string, slug: string };
 }
 export default async function BlogDetail( { params }: Props ) {

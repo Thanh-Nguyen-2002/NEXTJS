@@ -12,7 +12,8 @@ export const useGetProductByCAtegory = (id: string, page?: number, size?: number
         queryFn: () =>  getProductByCategory(id, page, size),
         retry: false,
         refetchOnMount:false,
-        refetchOnReconnect:false
+        refetchOnReconnect:false,
+        refetchOnWindowFocus:false
     })
     return {
         ResponseProductByCategory,

@@ -10,7 +10,7 @@ export default function useResponseProductCount() {
             if(width < 640) setVisibleCount(1);
             else if(width < 768) setVisibleCount(2);
             else if(width < 1024) setVisibleCount(3)
-            else if(width < 1028) setVisibleCount(4)
+            else if(width < 1280) setVisibleCount(4)
             else setVisibleCount(5)
         }
         updateVisibleCount()

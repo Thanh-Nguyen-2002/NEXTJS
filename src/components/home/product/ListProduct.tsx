@@ -3,15 +3,24 @@ import { categoryItems } from "@/types/category";
 import Link from "next/link";
 import ContentProduct from "./ContentProduct";
 
+
 export default async function ListProduct() {   
     const page = 0;
     const size = 10
+
     const category = await getAllCategory(page,size)
+    console.log(category);
+    
 
     const responseCategory = category?.data?.content
+    console.log(responseCategory);
+    
+    if(!responseCategory || responseCategory.length === 0) {
+        return null;
+    }
 
     return (
-        <div className="max-w-[1400px] mx-auto p-2">
+        <div className="max-w-[1400px] mx-auto flex flex-col gap-5 p-5">
             {responseCategory.map((cate) => {
 
                 return(

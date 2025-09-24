@@ -23,7 +23,7 @@ export default async function FlashSale() {
     if(nearestEndTime && new Date(nearestEndTime) < new Date()) return null;
 
     return (
-        <div className=' p-3'>
+        <div className=' p-5'>
             <div className="max-w-[1400px] mx-auto rounded-[8px] pb-2 group">
                 <div className="relative">
                     <div className="mx-auto text-center content-center">

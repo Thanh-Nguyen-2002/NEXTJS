@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const TextInfo = () => {
     return (
-        <div className="max-w-[1400px] mx-auto p-3">
+        <div className="max-w-[1400px] mx-auto p-5">
             <div className="bg-white py-10 px-4 md:px-10 rounded-lg shadow-md mt-[-50px] relative z-10">
                 <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-2">
                     CODEC TRAVEL
