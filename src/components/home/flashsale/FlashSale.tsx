@@ -3,19 +3,27 @@ import { getFlashSale } from "@/services/flashsale/flashsaleService"
 import { Flame } from "lucide-react";
 import Link from "next/link";
 import FlipCountdown from "./FlipCountdown";
+import { type FlashSale} from "@/types/flashsale";
 
 export default async function FlashSale() {
     const page = 0;
     const size = 10
     const flashsale = await getFlashSale(page, size)
 
-    const dataFlashSale = flashsale?.data?.content.find(items => items.active === true) || null
+    if(!flashsale?.data?.content  || flashsale.data.content.length === 0 ) {
+        return null;
+    }
 
-    if(!dataFlashSale) return null;
+    const dataFlashSale = flashsale.data.content.find(items => items.active === true) || ( {} as FlashSale)
+
+    if(!dataFlashSale?.id)  return null;
+
     const nearestEndTime = dataFlashSale.endTime
 
+    if(nearestEndTime && new Date(nearestEndTime) < new Date()) return null;
+
     return (
-        <div className=' p-3'>
+        <div className=' p-5'>
             <div className="max-w-[1400px] mx-auto rounded-[8px] pb-2 group">
                 <div className="relative">
                     <div className="mx-auto text-center content-center">

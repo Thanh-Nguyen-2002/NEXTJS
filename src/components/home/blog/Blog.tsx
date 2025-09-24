@@ -10,7 +10,7 @@ export default async function Blog() {
     const blog = responseBlog.data.content
 
     return (
-        <div className="mb-[50px] p-3">
+        <div className="mb-[50px] p-5">
             <div className="max-w-[1400px] mx-auto  min-h-[70vh] bg-white rounded-[10px] border border-gray-100 p-4 shadow-md">
                 <div className="border-b border-orange-500 flex items-center justify-between p-3">
                     <h1 className="py-3 font-bold text-xl">Bài viết phổ biến</h1>
