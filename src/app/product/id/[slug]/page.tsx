@@ -1,9 +1,16 @@
 import React from 'react'
-
-export default function ProductDetail() {
+interface Props{
+    params: {
+        id: string
+    }
+}
+export default function ProductDetail({params} : Props) {
+    const id = params.id
+    console.log(id);
+    
     return (
         <div>
-            123
+            ${params.id}
         </div>
     )
 }

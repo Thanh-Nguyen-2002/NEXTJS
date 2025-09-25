@@ -9,11 +9,8 @@ export default async function ListProduct() {
     const size = 10
 
     const category = await getAllCategory(page,size)
-    console.log(category);
-    
 
     const responseCategory = category?.data?.content
-    console.log(responseCategory);
     
     if(!responseCategory || responseCategory.length === 0) {
         return null;

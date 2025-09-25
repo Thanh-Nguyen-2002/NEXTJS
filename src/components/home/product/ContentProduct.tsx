@@ -6,6 +6,7 @@ import useResponseProductCount from '@/hooks/mobile/useResponseProductCount';
 import { useGetProductByCAtegory } from '@/hooks/product/useGetProductByCategory';
 import { Product } from '@/types/product';
 import { Card } from 'antd';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 import { start } from 'repl';
 interface Props {
@@ -15,6 +16,7 @@ export default function ContentProduct( props: Props ) {
     const id = props.id
     const page = 0;
     const size = 10
+    const router = useRouter()
     const [startIndex, setStartIndex] = useState(0);
     const visibleCount = useResponseProductCount()
     const {
@@ -52,7 +54,6 @@ export default function ContentProduct( props: Props ) {
         }
         
     }
-    console.log(startIndex);
     
     return (
         <div className='relative'>
@@ -63,7 +64,7 @@ export default function ContentProduct( props: Props ) {
                         className="relative flex flex-col p-3 bg-white rounded-[8px] flex-shrink-0 shadow transition-all duration-500 group product-card !m-0"
                         hoverable
                         style={{ borderRadius: 8, margin: 8 }}
-                    //   onClick={() => handleNavigateProduct(prod.id)}
+                        onClick={() => router.push(`/product/${prod.id}/${prod.slug}`)}
                     >
                         <div className="relative h-[160px] w-full rounded-[8px] overflow-hidden mx-auto">
                             <ImageWithFallback
