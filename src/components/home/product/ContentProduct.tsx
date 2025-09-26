@@ -8,7 +8,6 @@ import { Product } from '@/types/product';
 import { Card } from 'antd';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
-import { start } from 'repl';
 interface Props {
     id: string,
 }
